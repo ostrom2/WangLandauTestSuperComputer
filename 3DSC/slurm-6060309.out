@@ -1,0 +1,1341 @@
+# 
+#        You have called the 
+# 
+#             ---------
+#             | UNCLE |
+#             ---------
+# 
+# 
+# 
+#   Today's menu is:
+#
+#   10 - generate clusters only                                                                         
+#   11 - generate clusters, write cluster representatives and calculate correlations for input.         
+#   12 - Do all of 11 and then make a fit                                                               
+#   13 - Predict energy of input structures using J.1.out                                               
+#   14 - Minkowski reduce a cell in POSCAR                                                              
+#   15 - Fit using Bayesian Compressive Sensing                                                         
+#   16 - Write a J.out file                                                                             
+#   17 - Write a structures.in file with toy energies and random noise added to them.                   
+#
+#   20 - Enumerate superstructures of a given parent lattice: generate struct_enum.out                  
+#   21 - Calculate energies for all structures in struct_enum.out                                       
+#   22 - Print structures specified in structpred.in                                                    
+#   23 - Write multilattice d-vector occupancy for struct_enum.out                                      
+#
+#   30 - Perform MC simulation                                                                          
+#   31 - Evaluate and print sub-planes of the MC-cell (*.pov file and (x,y,z) *.dat file)               
+#   32 - calculate Warren-Cowley SRO parameters                                                         
+#   33 - calculate correlations for MCcell and structures.in                                            
+#
+#   40 - Perform metadynamics simulation                                                                
+#   41 - Perform Wang-Landau simulation                                                                 
+#   42 - Select i.i.d structures from struct_enum.out                                                   
+#
+
+Running in mode: 30 - Perform MC simulation                                                                          
+Reading lattice definition from lat.in
+ 
+           0 references
+================================================================================
+Setting up MC cell:
+. finding site equivalencies
+. determine spin mapping
+. vanilla site setup
+. populating sites (this may take some time, see progress bar)
+ rnd(): seed =       -21221
+ 
+| 0% --------------------|------------------ 100% |
+......... done.
+ 
+Target concentrations: 
+CE #  1     spin:  -1     concentration:  0.500
+CE #  1     spin:   1     concentration:  0.500
+ 
+. checking if concentrations are correct
+. summary:
+  MC cell size:          10 x 10 x 10                  
+  Final # of each type:              500             500
+  Total number of atoms:            1000
+setup finished.
+================================================================================
+ read in clusters!
+Generating MC clusters.
+ PIZZA
+ 
+Setting up basis functions for a rank  2 cluster expansion:
+ recursing Gram-polynomial of order            1 in rank           2 !
+     chebychev(-1, 1)= -1.000000
+ recursing Gram-polynomial of order            1 in rank           2 !
+     chebychev( 1, 1)=  1.000000
+ 
+ WARNING: tried to initialize a tracker without a clustertrack.in file, or the t
+ racker was already initialized.
+starting simulated annealing at T =      1.0000 K
+ Calculating energy of total cell.
+ For large cells >100,000 atoms this may take a few minutes.
+ Energy of total cell: -2.200000000000000E-002
+ 
+Maximum extent of any figure in g-space:   4
+Dependency box size length:                1    1    1
+ random_number(): seed =    655852415   655852452
+ 
+_________________________________________________________________________________
+                                                       temperature step #     0
+T     =      1.0
+ 
+Start Energy @ T=     1.0 =   -0.22000000000E-01
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       1.02     0.16     0.78     0.00         51056.0
++10.0M       10000000       -0.976340       -0.976340       -0.98000000000      86.59    13.47    66.60     0.00         60003.8
++10.0M       20000000       -0.980000       -0.003660       -0.98000000000      86.58    13.46    66.60     0.00         60009.1
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     885.35 s
+                                 173.17 s (19.6%) for filling dependency lists
+                                  26.93 s ( 3.0%) for parallel loop
+              Average speed:   22589.87 steps/s
+  
+Writing MCcell0000000.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     1
+T     =      1.1
+ 
+Start Energy @ T=     1.1 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.61     0.00         62424.5
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      85.88    13.36    61.42     0.00         62246.1
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.35    13.41    61.74     0.00         61919.2
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     871.78 s
+                                 172.23 s (19.8%) for filling dependency lists
+                                  26.77 s ( 3.1%) for parallel loop
+              Average speed:   22941.69 steps/s
+  
+Writing MCcell0000001.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     2
+T     =      1.2
+ 
+Start Energy @ T=     1.2 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.62     0.00         61974.8
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.36    13.43    62.72     0.00         61531.9
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.27    13.41    62.64     0.00         61607.5
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     875.61 s
+                                 172.64 s (19.7%) for filling dependency lists
+                                  26.84 s ( 3.1%) for parallel loop
+              Average speed:   22841.11 steps/s
+  
+Writing MCcell0000002.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     3
+T     =      1.3
+ 
+Start Energy @ T=     1.3 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.62     0.00         62036.1
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      89.59    13.99    64.78     0.00         59395.0
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      92.34    14.43    66.82     0.00         57607.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     922.44 s
+                                 181.93 s (19.7%) for filling dependency lists
+                                  28.42 s ( 3.1%) for parallel loop
+              Average speed:   21681.63 steps/s
+  
+Writing MCcell0000003.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     4
+T     =      1.4
+ 
+Start Energy @ T=     1.4 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.72     0.00         55992.8
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      92.33    14.48    72.43     0.00         55790.7
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      92.39    14.48    72.49     0.00         55755.6
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     948.21 s
+                                 184.72 s (19.5%) for filling dependency lists
+                                  28.96 s ( 3.1%) for parallel loop
+              Average speed:   21092.39 steps/s
+  
+Writing MCcell0000004.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     5
+T     =      1.5
+ 
+Start Energy @ T=     1.5 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.67     0.00         57614.5
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      92.35    14.36    67.04     0.00         57552.4
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      92.33    14.36    67.05     0.00         57553.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     936.73 s
+                                 184.68 s (19.7%) for filling dependency lists
+                                  28.72 s ( 3.1%) for parallel loop
+              Average speed:   21350.94 steps/s
+  
+Writing MCcell0000005.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     6
+T     =      1.6
+ 
+Start Energy @ T=     1.6 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.98     0.14     0.67     0.00         55799.1
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      97.26    14.44    66.66     0.00         56066.2
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      97.34    14.45    66.72     0.00         56020.2
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     946.15 s
+                                 194.61 s (20.6%) for filling dependency lists
+                                  28.89 s ( 3.1%) for parallel loop
+              Average speed:   21138.36 steps/s
+  
+Writing MCcell0000006.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     7
+T     =      1.7
+ 
+Start Energy @ T=     1.7 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.72     0.00         55966.5
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      92.44    14.42    72.45     0.00         55770.9
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      87.34    13.59    68.37     0.00         59068.1
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     922.40 s
+                                 179.78 s (19.5%) for filling dependency lists
+                                  28.01 s ( 3.0%) for parallel loop
+              Average speed:   21682.49 steps/s
+  
+Writing MCcell0000007.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     8
+T     =      1.8
+ 
+Start Energy @ T=     1.8 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.62     0.00         62240.3
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.44    13.41    62.11     0.00         61738.8
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.00    13.35    61.80     0.00         62052.6
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     873.77 s
+                                 172.45 s (19.7%) for filling dependency lists
+                                  26.76 s ( 3.1%) for parallel loop
+              Average speed:   22889.31 steps/s
+  
+Writing MCcell0000008.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #     9
+T     =      1.9
+ 
+Start Energy @ T=     1.9 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.88     0.14     0.54     0.00         64122.7
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.44    13.45    53.49     0.00         65194.3
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.24    13.43    53.39     0.00         65332.4
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     857.53 s
+                                 172.68 s (20.1%) for filling dependency lists
+                                  26.88 s ( 3.1%) for parallel loop
+              Average speed:   23322.88 steps/s
+  
+Writing MCcell0000009.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    10
+T     =      2.0
+ 
+Start Energy @ T=     2.0 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.38     0.00         72774.5
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.17    13.41    37.77     0.00         72804.2
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.22    13.41    37.81     0.00         72765.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     825.07 s
+                                 172.39 s (20.9%) for filling dependency lists
+                                  26.82 s ( 3.3%) for parallel loop
+              Average speed:   24240.23 steps/s
+  
+Writing MCcell0000010.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    11
+T     =      2.1
+ 
+Start Energy @ T=     2.1 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.62     0.00         61937.2
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.51    13.51    62.89     0.00         61383.6
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.20    13.47    62.66     0.00         61604.0
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     876.23 s
+                                 172.71 s (19.7%) for filling dependency lists
+                                  26.98 s ( 3.1%) for parallel loop
+              Average speed:   22824.95 steps/s
+  
+Writing MCcell0000011.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    12
+T     =      2.2
+ 
+Start Energy @ T=     2.2 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.66     0.00         60489.9
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.23    13.52    66.28     0.00         60229.2
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.54    13.53    66.51     0.00         60033.8
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     883.50 s
+                                 172.77 s (19.6%) for filling dependency lists
+                                  27.05 s ( 3.1%) for parallel loop
+              Average speed:   22637.12 steps/s
+  
+Writing MCcell0000012.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    13
+T     =      2.3
+ 
+Start Energy @ T=     2.3 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.62     0.00         61843.8
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.71    13.51    63.01     0.00         61264.9
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.08    13.42    62.57     0.00         61702.5
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     876.16 s
+                                 172.79 s (19.7%) for filling dependency lists
+                                  26.93 s ( 3.1%) for parallel loop
+              Average speed:   22826.96 steps/s
+  
+Writing MCcell0000013.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    14
+T     =      2.4
+ 
+Start Energy @ T=     2.4 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.87     0.13     0.38     0.00         72493.4
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.02    13.45    37.77     0.00         72864.3
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.34    13.49    37.91     0.00         72599.0
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     824.30 s
+                                 172.37 s (20.9%) for filling dependency lists
+                                  26.94 s ( 3.3%) for parallel loop
+              Average speed:   24263.13 steps/s
+  
+Writing MCcell0000014.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    15
+T     =      2.5
+ 
+Start Energy @ T=     2.5 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.46     0.00         68872.8
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.84    13.57    46.09     0.00         68259.6
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.58    13.53    45.97     0.00         68452.9
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     844.19 s
+                                 173.42 s (20.5%) for filling dependency lists
+                                  27.10 s ( 3.2%) for parallel loop
+              Average speed:   23691.48 steps/s
+  
+Writing MCcell0000015.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    16
+T     =      2.6
+ 
+Start Energy @ T=     2.6 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.66     0.00         60437.0
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      86.20    13.43    66.07     0.00         60350.0
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      86.41    13.47    66.25     0.00         60196.1
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     882.61 s
+                                 172.61 s (19.6%) for filling dependency lists
+                                  26.89 s ( 3.0%) for parallel loop
+              Average speed:   22660.08 steps/s
+  
+Writing MCcell0000016.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    17
+T     =      2.7
+ 
+Start Energy @ T=     2.7 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.61     0.00         62297.0
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      90.29    14.09    64.59     0.00         59181.9
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      95.62    14.98    68.45     0.00         55848.9
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     941.12 s
+                                 185.91 s (19.8%) for filling dependency lists
+                                  29.07 s ( 3.1%) for parallel loop
+              Average speed:   21251.29 steps/s
+  
+Writing MCcell0000017.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    18
+T     =      2.8
+ 
+Start Energy @ T=     2.8 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.96     0.15     0.46     0.00         63829.0
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      95.63    14.98    45.88     0.00         63903.0
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      95.62    14.96    45.87     0.00         63917.5
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     923.15 s
+                                 191.26 s (20.7%) for filling dependency lists
+                                  29.94 s ( 3.2%) for parallel loop
+              Average speed:   21665.03 steps/s
+  
+Writing MCcell0000018.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    19
+T     =      2.9
+ 
+Start Energy @ T=     2.9 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.96     0.15     0.42     0.00         65272.6
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      95.68    15.13    42.46     0.00         65245.1
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      95.72    15.13    42.47     0.00         65226.2
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     916.90 s
+                                 191.40 s (20.9%) for filling dependency lists
+                                  30.26 s ( 3.3%) for parallel loop
+              Average speed:   21812.67 steps/s
+  
+Writing MCcell0000019.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    20
+T     =      3.0
+ 
+Start Energy @ T=     3.0 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.96     0.15     0.69     0.00         55823.5
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      95.67    14.98    68.66     0.00         55770.5
++10.0M       20000000       -0.978927        0.001073       -0.98000000000      95.60    14.97    68.62     0.00         55807.2
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     968.68 s
+                                 191.27 s (19.7%) for filling dependency lists
+                                  29.95 s ( 3.1%) for parallel loop
+              Average speed:   20646.71 steps/s
+  
+Writing MCcell0000020.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    21
+T     =      3.1
+ 
+Start Energy @ T=     3.1 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.96     0.15     0.74     0.00         54283.7
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      95.66    14.96    73.56     0.00         54294.9
++10.0M       20000000       -0.980000        0.000000       -0.98000000000      95.31    14.88    73.30     0.00         54499.4
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     977.03 s
+                                 190.96 s (19.5%) for filling dependency lists
+                                  29.85 s ( 3.1%) for parallel loop
+              Average speed:   20470.12 steps/s
+  
+Writing MCcell0000021.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    22
+T     =      3.2
+ 
+Start Energy @ T=     3.2 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.94     0.15     0.59     0.00         59705.2
++10.0M       10000000       -0.979990       -0.979990       -0.98000000000      92.40    14.54    58.31     0.00         60515.0
++10.0M       20000000       -0.979868        0.000121       -0.98000000000      92.49    14.57    58.38     0.00         60445.4
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     920.46 s
+                                 184.89 s (20.1%) for filling dependency lists
+                                  29.11 s ( 3.2%) for parallel loop
+              Average speed:   21728.30 steps/s
+  
+Writing MCcell0000022.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    23
+T     =      3.3
+ 
+Start Energy @ T=     3.3 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.49     0.00         64230.4
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      92.20    14.36    49.40     0.00         64120.6
++10.0M       20000000       -0.979948        0.000052       -0.98000000000      92.27    14.38    49.42     0.00         64074.7
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     900.71 s
+                                 184.47 s (20.5%) for filling dependency lists
+                                  28.74 s ( 3.2%) for parallel loop
+              Average speed:   22204.69 steps/s
+  
+Writing MCcell0000023.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    24
+T     =      3.4
+ 
+Start Energy @ T=     3.4 =   -0.98000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.71     0.00         56442.6
++10.0M       10000000       -0.980000       -0.980000       -0.98000000000      92.31    14.39    71.00     0.00         56273.4
++10.0M       20000000       -0.997457       -0.017457       -1.00000000000      92.42    14.42    71.08     0.00         56204.5
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     945.27 s
+                                 184.74 s (19.5%) for filling dependency lists
+                                  28.80 s ( 3.0%) for parallel loop
+              Average speed:   21157.88 steps/s
+  
+Writing MCcell0000024.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    25
+T     =      3.5
+ 
+Start Energy @ T=     3.5 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.97     0.14     0.67     0.00         55988.1
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      97.83    14.41    67.27     0.00         55707.7
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      98.05    14.42    67.42     0.00         55590.1
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     950.82 s
+                                 195.88 s (20.6%) for filling dependency lists
+                                  28.83 s ( 3.0%) for parallel loop
+              Average speed:   21034.52 steps/s
+  
+Writing MCcell0000025.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    26
+T     =      3.6
+ 
+Start Energy @ T=     3.6 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.96     0.15     0.44     0.00         64742.0
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      95.70    14.90    44.05     0.00         64659.7
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      95.67    14.93    44.00     0.00         64686.8
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     919.40 s
+                                 191.37 s (20.8%) for filling dependency lists
+                                  29.84 s ( 3.2%) for parallel loop
+              Average speed:   21753.37 steps/s
+  
+Writing MCcell0000026.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    27
+T     =      3.7
+ 
+Start Energy @ T=     3.7 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       1.02     0.15     0.51     0.00         59611.6
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000     101.57    14.99    51.22     0.00         59602.1
++10.0M       20000000       -1.000000        0.000000       -1.00000000000     101.55    14.99    51.21     0.00         59613.7
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     945.61 s
+                                 203.12 s (21.5%) for filling dependency lists
+                                  29.98 s ( 3.2%) for parallel loop
+              Average speed:   21150.32 steps/s
+  
+Writing MCcell0000027.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    28
+T     =      3.8
+ 
+Start Energy @ T=     3.8 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.96     0.15     0.74     0.00         54253.7
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      95.69    14.97    73.64     0.00         54258.8
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      95.62    14.95    73.58     0.00         54304.4
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     978.54 s
+                                 191.31 s (19.6%) for filling dependency lists
+                                  29.92 s ( 3.1%) for parallel loop
+              Average speed:   20438.71 steps/s
+  
+Writing MCcell0000028.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    29
+T     =      3.9
+ 
+Start Energy @ T=     3.9 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.96     0.15     0.69     0.00         55746.4
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      95.70    14.98    68.65     0.00         55760.9
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      95.63    14.98    68.62     0.00         55795.8
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     968.83 s
+                                 191.32 s (19.7%) for filling dependency lists
+                                  29.97 s ( 3.1%) for parallel loop
+              Average speed:   20643.38 steps/s
+  
+Writing MCcell0000029.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    30
+T     =      4.0
+ 
+Start Energy @ T=     4.0 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.96     0.15     0.42     0.00         65618.5
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      95.27    14.89    41.67     0.00         65863.8
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.43    14.42    40.44     0.00         67896.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     898.11 s
+                                 187.70 s (20.9%) for filling dependency lists
+                                  29.30 s ( 3.3%) for parallel loop
+              Average speed:   22268.92 steps/s
+  
+Writing MCcell0000030.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    31
+T     =      4.1
+ 
+Start Energy @ T=     4.1 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.93     0.15     0.49     0.00         63771.4
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.57    14.46    48.73     0.00         64202.7
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.52    14.46    48.70     0.00         64236.2
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     901.63 s
+                                 185.09 s (20.5%) for filling dependency lists
+                                  28.92 s ( 3.2%) for parallel loop
+              Average speed:   22181.99 steps/s
+  
+Writing MCcell0000031.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    32
+T     =      4.2
+ 
+Start Energy @ T=     4.2 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.73     0.00         55627.5
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.42    14.54    73.36     0.00         55458.5
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.32    14.51    73.29     0.00         55519.9
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     949.55 s
+                                 184.73 s (19.5%) for filling dependency lists
+                                  29.05 s ( 3.1%) for parallel loop
+              Average speed:   21062.71 steps/s
+  
+Writing MCcell0000032.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    33
+T     =      4.3
+ 
+Start Energy @ T=     4.3 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.71     0.00         56422.5
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.41    14.39    71.05     0.00         56226.4
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.51    14.42    71.08     0.00         56175.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     946.23 s
+                                 184.92 s (19.5%) for filling dependency lists
+                                  28.81 s ( 3.0%) for parallel loop
+              Average speed:   21136.46 steps/s
+  
+Writing MCcell0000033.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    34
+T     =      4.4
+ 
+Start Energy @ T=     4.4 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.49     0.00         64398.6
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.71    14.43    49.37     0.00         63892.5
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.28    14.36    49.15     0.00         64187.6
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     902.74 s
+                                 185.00 s (20.5%) for filling dependency lists
+                                  28.79 s ( 3.2%) for parallel loop
+              Average speed:   22154.76 steps/s
+  
+Writing MCcell0000034.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    35
+T     =      4.5
+ 
+Start Energy @ T=     4.5 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.94     0.15     0.58     0.00         60290.5
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.21    14.43    56.91     0.00         61143.7
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.26    14.42    56.91     0.00         61129.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     915.98 s
+                                 184.47 s (20.1%) for filling dependency lists
+                                  28.85 s ( 3.1%) for parallel loop
+              Average speed:   21834.63 steps/s
+  
+Writing MCcell0000035.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    36
+T     =      4.6
+ 
+Start Energy @ T=     4.6 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.71     0.00         56347.1
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.69    14.46    71.42     0.00         56002.5
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.58    14.48    71.34     0.00         56054.1
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     948.07 s
+                                 185.26 s (19.5%) for filling dependency lists
+                                  28.94 s ( 3.1%) for parallel loop
+              Average speed:   21095.41 steps/s
+  
+Writing MCcell0000036.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    37
+T     =      4.7
+ 
+Start Energy @ T=     4.7 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.67     0.00         57729.9
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.36    14.45    67.07     0.00         57510.7
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.35    14.45    67.05     0.00         57521.0
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     937.16 s
+                                 184.71 s (19.7%) for filling dependency lists
+                                  28.90 s ( 3.1%) for parallel loop
+              Average speed:   21341.18 steps/s
+  
+Writing MCcell0000037.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    38
+T     =      4.8
+ 
+Start Energy @ T=     4.8 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.94     0.15     0.41     0.00         66915.1
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.54    14.40    40.61     0.00         67772.3
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.56    14.40    40.66     0.00         67741.6
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     885.76 s
+                                 185.10 s (20.9%) for filling dependency lists
+                                  28.80 s ( 3.3%) for parallel loop
+              Average speed:   22579.47 steps/s
+  
+Writing MCcell0000038.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    39
+T     =      4.9
+ 
+Start Energy @ T=     4.9 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.98     0.14     0.49     0.00         62135.6
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      97.87    14.35    49.12     0.00         61982.9
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      98.23    14.39    49.30     0.00         61756.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     913.02 s
+                                 196.10 s (21.5%) for filling dependency lists
+                                  28.74 s ( 3.1%) for parallel loop
+              Average speed:   21905.41 steps/s
+  
+Writing MCcell0000039.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    40
+T     =      5.0
+ 
+Start Energy @ T=     5.0 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.94     0.15     0.73     0.00         54969.9
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.51    14.44    71.41     0.00         56064.2
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.55    14.47    71.50     0.00         56016.1
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     946.63 s
+                                 185.06 s (19.5%) for filling dependency lists
+                                  28.91 s ( 3.1%) for parallel loop
+              Average speed:   21127.60 steps/s
+  
+Writing MCcell0000040.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    41
+T     =      5.1
+ 
+Start Energy @ T=     5.1 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.67     0.00         57721.9
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.48    14.43    66.76     0.00         57581.9
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.94    14.52    67.08     0.00         57291.8
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     938.88 s
+                                 185.42 s (19.7%) for filling dependency lists
+                                  28.95 s ( 3.1%) for parallel loop
+              Average speed:   21302.01 steps/s
+  
+Writing MCcell0000041.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    42
+T     =      5.2
+ 
+Start Energy @ T=     5.2 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.92     0.14     0.42     0.00         67203.3
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.19    14.39    42.45     0.00         67101.9
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      92.36    14.43    42.52     0.00         66973.6
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     887.23 s
+                                 184.55 s (20.8%) for filling dependency lists
+                                  28.82 s ( 3.2%) for parallel loop
+              Average speed:   22541.97 steps/s
+  
+Writing MCcell0000042.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    43
+T     =      5.3
+ 
+Start Energy @ T=     5.3 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.93     0.15     0.50     0.00         63557.1
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      92.56    14.53    49.51     0.00         63856.0
++10.0M       20000000       -0.999799        0.000201       -0.99200000000      88.77    13.92    47.50     0.00         66584.1
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     885.30 s
+                                 181.33 s (20.5%) for filling dependency lists
+                                  28.45 s ( 3.2%) for parallel loop
+              Average speed:   22591.15 steps/s
+  
+Writing MCcell0000043.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    44
+T     =      5.4
+ 
+Start Energy @ T=     5.4 =   -0.99200000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.66     0.00         60689.2
++10.0M       10000000       -0.999627       -0.999627       -1.00000000000      85.95    13.40    65.76     0.00         60565.8
++10.0M       20000000       -1.000000       -0.000373       -1.00000000000      86.61    13.49    66.25     0.00         60111.8
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     881.96 s
+                                 172.57 s (19.6%) for filling dependency lists
+                                  26.89 s ( 3.0%) for parallel loop
+              Average speed:   22676.81 steps/s
+  
+Writing MCcell0000044.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    45
+T     =      5.5
+ 
+Start Energy @ T=     5.5 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.87     0.14     0.62     0.00         61413.8
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      86.46    13.45    61.86     0.00         61816.3
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      86.49    13.45    61.87     0.00         61798.0
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     875.35 s
+                                 172.95 s (19.8%) for filling dependency lists
+                                  26.90 s ( 3.1%) for parallel loop
+              Average speed:   22848.02 steps/s
+  
+Writing MCcell0000045.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    46
+T     =      5.6
+ 
+Start Energy @ T=     5.6 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.43     0.00         70281.6
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      86.09    13.38    43.31     0.00         70039.4
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      86.00    13.37    43.27     0.00         70102.7
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     834.08 s
+                                 172.09 s (20.6%) for filling dependency lists
+                                  26.76 s ( 3.2%) for parallel loop
+              Average speed:   23978.63 steps/s
+  
+Writing MCcell0000046.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    47
+T     =      5.7
+ 
+Start Energy @ T=     5.7 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.40     0.00         71488.5
++10.0M       10000000       -0.999869       -0.999869       -1.00000000000      86.01    13.36    40.26     0.00         71622.7
++10.0M       20000000       -1.000000       -0.000131       -1.00000000000      86.51    13.44    40.41     0.00         71245.4
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     830.38 s
+                                 172.51 s (20.8%) for filling dependency lists
+                                  26.80 s ( 3.2%) for parallel loop
+              Average speed:   24085.48 steps/s
+  
+Writing MCcell0000047.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    48
+T     =      5.8
+ 
+Start Energy @ T=     5.8 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.62     0.00         62247.1
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      86.37    13.46    61.95     0.00         61809.4
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      86.05    13.42    61.73     0.00         62032.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     873.34 s
+                                 172.43 s (19.7%) for filling dependency lists
+                                  26.88 s ( 3.1%) for parallel loop
+              Average speed:   22900.51 steps/s
+  
+Writing MCcell0000048.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    49
+T     =      5.9
+ 
+Start Energy @ T=     5.9 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.62     0.00         62062.9
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      86.25    13.43    62.49     0.00         61663.7
++10.0M       20000000       -1.000000        0.000000       -1.00000000000      86.08    13.42    62.37     0.00         61779.5
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     874.20 s
+                                 172.32 s (19.7%) for filling dependency lists
+                                  26.85 s ( 3.1%) for parallel loop
+              Average speed:   22878.01 steps/s
+  
+Writing MCcell0000049.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    50
+T     =      6.0
+ 
+Start Energy @ T=     6.0 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.39     0.00         72423.2
++10.0M       10000000       -0.997768       -0.997768       -1.00000000000      86.16    13.43    39.50     0.00         71891.2
++10.0M       20000000       -1.000000       -0.002232       -1.00000000000      85.67    13.33    39.46     0.00         72221.6
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     826.09 s
+                                 171.83 s (20.8%) for filling dependency lists
+                                  26.76 s ( 3.2%) for parallel loop
+              Average speed:   24210.54 steps/s
+  
+Writing MCcell0000050.out... done. (   0.0 s)
+ 
+_________________________________________________________________________________
+                                                       temperature step #    51
+T     =      6.1
+ 
+Start Energy @ T=     6.1 =   -1.00000000000    
+Averaging over at least      1.00E+07 steps
+Energy converged if change in avg energy is < 0.030000
+Number of dependency lists:    1
+ 
+             MC steps |        <E>/eV |       d<E>/eV |               E/eV |   t_fd/s | t_pl/s | t_sw/s | t_mu/s |       steps/s |
+        --------------------------------------------------------------------------------------------------------------------------
+speed info:    100000             N/A             N/A                  N/A       0.86     0.13     0.46     0.00         69117.8
++10.0M       10000000       -1.000000       -1.000000       -1.00000000000      85.70    13.38    45.70     0.00         69071.2
++10.0M       20000000       -0.999220        0.000780       -1.00000000000      85.70    13.37    45.70     0.00         69078.3
+        avg energy converged...
+        --------------------------------------------------------------------------------------------------------------------------
+        Average list 0 size:          1 entries
+                 Total time:     836.37 s
+                                 171.40 s (20.5%) for filling dependency lists
+                                  26.74 s ( 3.2%) for parallel loop
+              Average speed:   23912.74 steps/s
+  
+Writing MCcell0000051.out... done. (   0.0 s)
+_________________________________________________________________________________
+ 
+ Calculating energy of total cell.
+ For large cells >100,000 atoms this may take a few minutes.
+---------------------------------------------------------------------------------
+final energy (sum of Deltas):                         -1.0000000    
+final energy (full corr., only for small MC cells):   -1.0000000    
+difference:                                            0.6661338E-15
+---------------------------------------------------------------------------------
+ 
+Mode 30 - Perform MC simulation                                                                          
+... done!
