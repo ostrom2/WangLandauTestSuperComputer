@@ -16,7 +16,9 @@
 # - only if grandcanonical:
 #   { list of mu's }, one for each atomic species
 grandcanonical
-0 0
+1 2
+0 1 1 0
+1000 0 1 1 0
 #
 #--------------------------------------------------------------------------------
 # Temperature parameters
