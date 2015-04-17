@@ -1,0 +1,49 @@
+#
+# This file contains the basic information about the lattice
+#
+#--------------------------------------------------------------------------------
+# General information
+# - name of the system
+# - type of CE: bulk / surface / adsorbate
+# - rank of CE: 1 / 2 / 3
+# - number of observables of CE: 1 
+# - epsilon for finite precision checking of real space coordinates
+#
+Ag-Pt fcc
+bulk
+2
+1
+.001 
+#
+#--------------------------------------------------------------------------------
+# Lattice information
+# - lattice vectors in cartesian coordinates:
+#   * a1
+#   * a2
+#   * a3
+# - basis (aka dvectors)
+#   * number of dvectors
+#   * coordinate system of dvectors: direct / cartesian
+#   * for each dvector: 3 coordinates
+#
+# |--- fcc ---|
+1.0 0.0 0.0
+0.0 0.1 0.0
+0.0 0.0 1.0
+1      
+D
+0. 0. 0.  
+#            
+#
+#--------------------------------------------------------------------------------
+# Cutoffs for figure generation (cartesian L2 distance)
+500 500 500 500 500 0 0 0 0 0
+#
+#--------------------------------------------------------------------------------
+# Number of references
+# default: 0
+0 
+#
+#--------------------------------------------------------------------------------
+# GSS span (obsolete, not read in)
+2 4
