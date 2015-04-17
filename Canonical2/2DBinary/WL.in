@@ -1,0 +1,24 @@
+# Binning Mode (Do you want to coarse grain the domain? (Y/N) (for speed) )
+Y
+# What energy bin size do you want? (Doesn't matter what this number is if you aren't binning)
+4
+# Energy Bin Boundary
+0
+# What correlation bin size do you want? (Doesn't matter what this number is if you aren't binning)
+2
+# Corr Bin Boundary
+0
+# Mode (Concentration restricted (C) or concentration varies (G) )
+C
+# Concentration
+0.5 0.5
+#Size
+1 10 10
+# Flatness criteria. What percentage of the histogram entries must be above the mean.
+0.8
+# Log(g) modification factor min bound.
+0.00000001
+# After how many iterations of not finding a new energy will I consider my energy bounds to be found. (nD * number specified)
+1000000
+# Every how many iterations will I check the histogram for flatness. (nD * number specified)
+10000
