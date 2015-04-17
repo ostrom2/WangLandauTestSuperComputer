@@ -1,0 +1,79 @@
+#
+# This file contains information required for a MC-simulation
+#
+#--------------------------------------------------------------------------------
+# size of MC-cell:
+#
+1 10 10
+#
+#--------------------------------------------------------------------------------
+# concentrations of atomic species:
+.5 .5
+#
+#--------------------------------------------------------------------------------
+# Statistical Ensemble:
+# - canonical, or grandcanonical
+# - only if grandcanonical:
+#   { list of mu's }, one for each atomic species
+grandcanonical
+#
+#--------------------------------------------------------------------------------
+# Temperature parameters
+# - number of temperature schedules
+# - for each schedule
+#   {
+#       . starting temperature
+#       . temperature change (e.g. "* 0.9", "- 100", "+ 100")
+#   }
+# - end temperature
+1
+1
++ .1
+6
+#--------------------------------------------------------------------------------
+# MC parameters
+# - Steps to average over
+# - convergence setting
+#      >0: energy convergence, give the desired accuracy
+#      <0: (negative) number of MC steps performed at each temperature
+#
+10000000
+0.03
+# 
+#--------------------------------------------------------------------------------
+# Parallel MC and performance settings
+# - number of dependency lists
+#   recommendation: 4
+#   (you may play around a little bit here before running a whole MC simulation)
+# - edge length of dependency boxes. Must be commensurate to MC cell size
+#   (default: 1, i.e. dependencies are marked for each site separately)
+# - do only speed test (T/F)? test speed for how many steps (in units of 100k steps 
+#   per MPI process, optional; only applicable if < averaging steps)
+1
+1 1 1 
+F 1
+#
+#--------------------------------------------------------------------------------
+# After how many temperature steps do we write out MCcell?
+#   >0 = write MCcell after specified number of temperature steps
+#    0 = never
+#   -1 = write temporary MCcell after each averaging step
+1
+#
+#--------------------------------------------------------------------------------
+# Continue parameters:
+# - continue previous MC-simulation?
+# - if .true.:
+#  * filename of cell to be read in
+#  * the number of the temperature steps this file belongs to
+#  * the temperature this file belongs to
+#  * continue energy
+#  * was the energy converged at this temperature?
+#    (i.e. can we continue with the next temperature. Usually, if you read in a
+#     *.tmp file, the energy was not converged)
+F
+MCcell000.out.tmp
+0
+10000
+0
+F
